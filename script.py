@@ -25,7 +25,7 @@ NOTE: Download may take some time! So please wait for it to complete!"""
 
 📌<b>Language :</b> <code>Python3</code>
 
-📌<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7/a> 
+📌<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7/a>"""
 
 
 
