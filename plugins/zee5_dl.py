@@ -375,7 +375,7 @@ async def zee5_execute(bot, update):
                         chat_id=update.message.chat.id,
                         document=download_directory,
                         thumb=thumb_image_path,
-                        caption=description,
+                        caption="custom_file_name",
                         parse_mode="HTML",
                         # reply_markup=reply_markup,
                         reply_to_message_id=update.message.reply_to_message.message_id,
@@ -390,7 +390,7 @@ async def zee5_execute(bot, update):
                     await bot.send_video(
                         chat_id=update.message.chat.id,
                         video=download_directory,
-                        caption=description,
+                        caption="custom_file_name",
                         parse_mode="HTML",
                         duration=duration,
                         width=width,
