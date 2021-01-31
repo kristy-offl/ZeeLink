@@ -224,8 +224,8 @@ async def zee5_execute(bot, update):
         videoname = linksplit[+7]
         #videoname = file_name
         #custom_file_name = linksplit[+5]
-        #logger.info(videoname)
-        logger.info(custom_file_name)
+        logger.info(videoname)
+        #logger.info(custom_file_name)
         
         #custom_file_name = videoname1 + " - " + videoname
         custom_file_name = videoname
