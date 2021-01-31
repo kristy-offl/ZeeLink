@@ -199,7 +199,8 @@ async def zee5_execute(bot, update):
   
     try:
         cb_data = update.data
-        file_name = videoname
+        custom_file_name = str(response_json.get("title")) + \
+        "_" + youtube_dl_format + "." + youtube_dl_ext
         tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("|")
         
         thumb_image_path = Config.DOWNLOAD_LOCATION + \
@@ -228,7 +229,7 @@ async def zee5_execute(bot, update):
         #logger.info(custom_file_name)
         
         #custom_file_name = videoname1 + " - " + videoname
-        custom_file_name = videoname
+        #custom_file_name = videoname
 
         await bot.edit_message_text(
             text=script.DOWNLOAD_START,
