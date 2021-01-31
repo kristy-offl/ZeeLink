@@ -80,8 +80,8 @@ async def zee5_capture(bot, update):
                         url = g2 + req3["video_token"]               
                     else:
                         file_name = r2["title"]
-                        url = "https://" + li["url"] + g2 + req1["video_token"]
-                    
+                        #url = "https://" + li["url"] + g2 + req1["video_token"]
+                        url = "https://zee5-player.vercel.app/player?id=" + req1["video_token"]
             logger.info(url)
         except:
             await update.reply_text("There's some issue with your URL 😕", quote=True)
