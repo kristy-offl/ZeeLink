@@ -93,7 +93,7 @@ async def zee5_capture(bot, update):
     
     try:
         zee5_capture.url = url
-        file_name = videoname  
+          
         
         command_to_exec = [
             "youtube-dl",
@@ -199,6 +199,7 @@ async def zee5_execute(bot, update):
   
     try:
         cb_data = update.data
+        file_name = videoname
         tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("|")
         
         thumb_image_path = Config.DOWNLOAD_LOCATION + \
