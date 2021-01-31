@@ -4,6 +4,8 @@ logging.basicConfig(level=logging.DEBUG,
 logger = logging.getLogger(__name__)
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
+from telethon import TelegramClient, events, Button
+
 import os
 import re
 import json
@@ -69,8 +71,8 @@ async def zee5_capture(bot, update):
             #req3 = requests.get("https://useraction.zee5.com/token").json()    
             #if "movies" in w:
                     #r1 = requests.get(li["token"] + "-".join(rgx),
-                                                headers=headers, 
-                                                params={"translation":"en", "country":"IN"}).json()
+                                                #headers=headers, 
+                                                #params={"translation":"en", "country":"IN"}).json()
                     #g1 = (r1["hls"][0].replace("drm", "hls") + req1["video_token"])
                     #file_name = r1["title"]
                     #url = "https://" + li["url"] + g1
