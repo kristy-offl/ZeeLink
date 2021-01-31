@@ -226,7 +226,7 @@ async def zee5_execute(bot, update):
         #logger.info(custom_file_name)
         
         #custom_file_name = videoname1 + " - " + videoname
-        custom_file_name = r2["title"]
+        custom_file_name = videoname
 
         await bot.edit_message_text(
             text=script.DOWNLOAD_START,
