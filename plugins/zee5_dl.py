@@ -219,11 +219,10 @@ async def zee5_execute(bot, update):
             return False
         
         youtube_dl_url = zee5_capture.url
-        custom_file_name = str(response_json.get("title")) + \
-        "_" + youtube_dl_format + "." + youtube_dl_ext
-        #linksplit = update.message.reply_to_message.text.split("/")
+      
+        linksplit = update.message.reply_to_message.text.split("/")
         #videoname = linksplit[+7]
-        #videoname = title
+        videoname = file_name
         #custom_file_name = linksplit[+5]
         #logger.info(videoname)
         logger.info(custom_file_name)
