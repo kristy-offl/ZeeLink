@@ -220,7 +220,7 @@ async def zee5_execute(bot, update):
         
         linksplit = update.message.reply_to_message.text.split("/")
         #videoname1 = linksplit[+5]
-        videoname = file_name
+        videoname = title
         #custom_file_name = linksplit[+5]
         logger.info(videoname)
         #logger.info(custom_file_name)
