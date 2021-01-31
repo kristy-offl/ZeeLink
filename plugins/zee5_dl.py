@@ -41,7 +41,7 @@ from plugins.helpers import(
 
 
 
-@Client.on_message(filters.private & filters.regex(pattern=".*ahttp.*"))
+@Client.on_message(filters.private & filters.regex(pattern=".*http.*"))
 async def zee5_capture(bot, update):
 
     if update.from_user.id in Config.BANNED_USERS:
@@ -219,7 +219,7 @@ async def zee5_execute(bot, update):
         youtube_dl_url = zee5_capture.url
         
         linksplit = update.message.reply_to_message.text.split("/")
-        videoname = linksplit[+5]
+        videoname = linksplit[+6]
         #custom_file_name = linksplit[+5]
         logger.info(videoname)
         #logger.info(custom_file_name)
