@@ -221,8 +221,8 @@ async def zee5_execute(bot, update):
         youtube_dl_url = zee5_capture.url
       
         linksplit = update.message.reply_to_message.text.split("/")
-        #videoname = linksplit[+7]
-        videoname = file_name
+        videoname = linksplit[+7]
+        #videoname = file_name
         #custom_file_name = linksplit[+5]
         #logger.info(videoname)
         logger.info(custom_file_name)
