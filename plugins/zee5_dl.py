@@ -83,6 +83,7 @@ async def zee5_capture(bot, update):
                         url = "https://" + li["url"] + g2 + req1["video_token"]
                     
             logger.info(url)
+            logger.info(file_name)
         except:
             await update.reply_text("There's some issue with your URL 😕", quote=True)
             return
@@ -199,8 +200,6 @@ async def zee5_execute(bot, update):
   
     try:
         cb_data = update.data
-        custom_file_name = str(response_json.get("title")) + \
-        "_" + youtube_dl_format + "." + youtube_dl_ext
         tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("|")
         
         thumb_image_path = Config.DOWNLOAD_LOCATION + \
@@ -220,16 +219,17 @@ async def zee5_execute(bot, update):
             return False
         
         youtube_dl_url = zee5_capture.url
-        
-        linksplit = update.message.reply_to_message.text.split("/")
-        #videoname1 = linksplit[+5]
+        custom_file_name = str(response_json.get("title")) + \
+        "_" + youtube_dl_format + "." + youtube_dl_ext
+        #linksplit = update.message.reply_to_message.text.split("/")
+        #videoname = linksplit[+7]
         #videoname = title
         #custom_file_name = linksplit[+5]
-        logger.info(videoname)
-        #logger.info(custom_file_name)
+        #logger.info(videoname)
+        logger.info(custom_file_name)
         
         #custom_file_name = videoname1 + " - " + videoname
-        #custom_file_name = videoname
+        custom_file_name = videoname
 
         await bot.edit_message_text(
             text=script.DOWNLOAD_START,
