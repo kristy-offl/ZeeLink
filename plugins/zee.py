@@ -85,15 +85,15 @@ async def zee5_capture(bot, update):
                         url = "https://zee5-player.vercel.app/player?id=" + ["token"]
                     
             logger.info(url)
-        except:
-            await update.reply_text("There's some issue with your URL 😕", quote=True)
-            return
+        #except:
+            #await update.reply_text("There's some issue with your URL 😕", quote=True)
+           # return
             
-    else:
-        await update.reply_text("I can download from Zee5 links only!", quote=True)
-        return
+   # else:
+        #await update.reply_text("I can download from Zee5 links only!", quote=True)
+        #return
     
-    try:
+    #try:
         zee5_capture.url = url    
         
         command_to_exec = [
