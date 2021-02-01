@@ -83,25 +83,25 @@ async def zee5_capture(bot, update):
                         url = "https://" + li["url"] + g2 + req1["video_token"]
                     
             logger.info(url)
-            logger.info(file_name)
         except:
             await update.reply_text("There's some issue with your URL 😕", quote=True)
             return
             
     else:
-        await update.reply_text("I can download from Zee5 links only!", quote=True)
+        await update.reply_text("I can download from Zee5 links only! Use @UploadHEXbot for other links 😇", quote=True)
         return
     
     try:
-        zee5_capture.url = url
-          
+        zee5_capture.url = url    
         
         command_to_exec = [
             "youtube-dl",
             "--no-warnings",
             "--youtube-skip-dash-manifest",
             "-j",
-            url
+            url,
+            "--geo-bypass-country",
+            "IN"
         ]
         process = await asyncio.create_subprocess_exec(
             *command_to_exec,
@@ -152,7 +152,7 @@ async def zee5_capture(bot, update):
                                 #"📁 FILE " + format_ext + " " + approx_file_size + " ",
                                 #callback_data=(cb_string_file).encode("UTF-8")
                            # )
-                        ]                           
+                        #]                           
                         inline_keyboard.append(ikeyboard)
                         
             inline_keyboard.append([
@@ -219,15 +219,11 @@ async def zee5_execute(bot, update):
             return False
         
         youtube_dl_url = zee5_capture.url
-      
+        
         linksplit = update.message.reply_to_message.text.split("/")
         videoname = linksplit[+7]
-        #videoname = file_name
-        #custom_file_name = linksplit[+5]
         logger.info(videoname)
-        #logger.info(custom_file_name)
         
-        #custom_file_name = videoname1 + " - " + videoname
         custom_file_name = videoname
 
         await bot.edit_message_text(
@@ -253,7 +249,9 @@ async def zee5_execute(bot, update):
             "-o", download_directory
         ]                  
         command_to_exec.append("--no-warnings")
-
+        command_to_exec.append("--geo-bypass-country")
+        command_to_exec.append("IN")
+        
         start = datetime.now()
         process = await asyncio.create_subprocess_exec(
             *command_to_exec,
@@ -279,6 +277,9 @@ async def zee5_execute(bot, update):
                 "-o", download_directory
             ]                  
             command_to_exec.append("--no-warnings")
+            command_to_exec.append("--geo-bypass-country")
+            command_to_exec.append("IN")
+        
             start = datetime.now()
             process = await asyncio.create_subprocess_exec(
                 *command_to_exec,
