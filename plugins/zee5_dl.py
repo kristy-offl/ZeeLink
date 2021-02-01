@@ -221,9 +221,9 @@ async def zee5_execute(bot, update):
         youtube_dl_url = zee5_capture.url
         
         linksplit = update.message.reply_to_message.text.split("/")
-    try:
+     if:
         videoname = linksplit[+7]
-    except:
+     else:
         videoname = linksplit[+5]
         logger.info(videoname)
         
