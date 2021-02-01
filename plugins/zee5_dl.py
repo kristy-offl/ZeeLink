@@ -40,7 +40,7 @@ from plugins.helpers import(
 
 
 
-@Client.on_message(filters.private & filters.regex(pattern=".*https://www.zee5.com/tvshows/.*"))
+@Client.on_message(filters.private & filters.regex(pattern=".*https.*"))
 async def zee5_capture(bot, update):
 
     if update.from_user.id in Config.BANNED_USERS:
@@ -158,7 +158,7 @@ async def zee5_capture(bot, update):
                 InlineKeyboardButton(
                     "✖️ CLOSE Shows ✖️",
                      callback_data=(
-                        "closeformat2").encode("UTF-8")
+                        "closeformat").encode("UTF-8")
                 )
              ])
 
@@ -195,10 +195,10 @@ async def zee5_capture(bot, update):
         logger.info('format send error')
         return
              
-async def zee5_execute2(bot, update):
+async def zee5_execute(bot, update):
   
     try:
-        cb_data = update.data2
+        cb_data = update.data
         tg_send_type, youtube_dl_format, youtube_dl_ext = cb_data.split("|")
         
         thumb_image_path = Config.DOWNLOAD_LOCATION + \
@@ -220,7 +220,7 @@ async def zee5_execute2(bot, update):
         youtube_dl_url = zee5_capture.url
         
         linksplit = update.message.reply_to_message.text.split("/")
-        videoname = linksplit[+7]
+        videoname = linksplit[+5]
         logger.info(videoname)
         
         custom_file_name = videoname
