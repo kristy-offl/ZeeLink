@@ -41,7 +41,7 @@ from plugins.helpers import(
 
 
 
-@Client.on_message(filters.private & filters.regex(pattern=".*http.*"))
+@Client.on_message(filters.private & filters.regex(pattern=".*https://www.zee5.com/movies/.*"))
 async def zee5_capture(bot, update):
 
     if update.from_user.id in Config.BANNED_USERS:
