@@ -157,9 +157,9 @@ async def zee5_capture(bot, update):
                         
             inline_keyboard.append([
                 InlineKeyboardButton(
-                    "✖️ CLOSE ✖️",
+                    "✖️ CLOSE Movies ✖️",
                      callback_data=(
-                        "closeformat").encode("UTF-8")
+                        "closeformat1").encode("UTF-8")
                 )
              ])
 
