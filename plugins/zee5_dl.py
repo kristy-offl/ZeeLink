@@ -223,7 +223,7 @@ async def zee5_execute(bot, update):
         linksplit = update.message.reply_to_message.text.split("/")
     try:
         videoname = linksplit[+7]
-    expect:
+    except:
         videoname = linksplit[+5]
         logger.info(videoname)
         
