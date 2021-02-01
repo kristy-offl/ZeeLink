@@ -19,20 +19,19 @@ Click <u>/help</u> for more details....</b>"""
 NOTE: Download may take some time! So please wait for it to complete!"""
 
 
-    ABOUT_TEXT = """📌<b>My Name : Zee5 Downloader</b>
+    ABOUT_TEXT = """📌 <b>My Name : Zee5 Downloader</b>
 
-📌<b>Creater :</b> @JAsuran
+📌 <b>Creater :</b> @JAsuran
 
-📌<b>Language :</b> <code>Python3</code>
+📌 <b>Language :</b> <code>Python3</code>
 
-📌<b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a>"""
+📌 <b>Library :</b> <a href='https://docs.pyrogram.org/'>Pyrogram 1.0.7</a>"""
 
 
 
     FORMAT_SELECTION = """<b>Choose appropriate option</b> <a href='{}'>⬇️</a>
 
 🎞  - Stream format
-📁  - File format
 
 <i>NOTE : Taking high resolutions may result in files above 2GB and hence cannot Upload to TG. So better select a medium resolution.</i> 😇
 """    
