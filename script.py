@@ -44,7 +44,7 @@ NOTE: Download may take some time! So please wait for it to complete!"""
     
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations."
 
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "**என்னைப் பயன்படுத்தியதற்கு நன்றி...J!! ❤️**"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "**என்னைப் பயன்படுத்தியதற்கு நன்றி...!! ❤️**"
     
     SAVED_CUSTOM_THUMB_NAIL = "<b>✅Custom thumbnail Saved.\nThis thumbnail will be Permanent for all future uploads\n\nDo /delthumb to clear your thumbnail!</b>"
     
