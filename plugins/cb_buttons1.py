@@ -10,5 +10,5 @@ async def formatbuttons2(bot, update):
     if "|" in update.data2:
         await zee5_execute2(bot, update)
         
-    elif "closeformat2" in update.data:     
+    elif "closeformat2" in update.data2:     
         await update.message.delete()
