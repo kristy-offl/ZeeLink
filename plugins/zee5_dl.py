@@ -80,7 +80,7 @@ async def zee5_capture(bot, update):
                    # else:
                        # file_name = r2["title"]
                         #url = "https://" + li["url"] + g2 + req1["video_token"]
-                        url = "https://zee5-ts.tprojects.workers.dev/?url=" + w
+            url = "https://zee5-ts.tprojects.workers.dev/?url=" + w
                     
             logger.info(url)
         except:
