@@ -54,6 +54,6 @@ NOTE: Download may take some time! So please wait for it to complete!"""
     
     NO_THUMB = "So Sad 😢 No saved thumbnails Found!!"
     
-    CUSTOM_CAPTION_UL_FILE = "description"
+    CUSTOM_CAPTION_UL_FILE = "<b>{newname}\n\n©️ @JAsuran ❤️</b>"
     TIMEOUT = "<b><i>Sorry for the delay. It'll help reduce the flood wait</i> 😇\n\nWait for {} sec and try again.</b>"
     
