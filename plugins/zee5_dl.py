@@ -78,7 +78,7 @@ async def zee5_capture(bot, update):
                         #file_name = r2["title"]
                       #  url = g2 + req3["video_token"]               
                    # else:
-                        file_name = r2["title"]
+                       # file_name = r2["title"]
                         #url = "https://" + li["url"] + g2 + req1["video_token"]
                         url = "https://zee5-ts.tprojects.workers.dev/?url=" + w
                     
