@@ -1,4 +1,3 @@
-#JAsuran
 import logging
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -20,6 +19,7 @@ if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
     from config import Config
+
 from script import script
 from database.database import *
 
@@ -40,7 +40,8 @@ from plugins.helpers import(
 )
 
 
-@Client.on_message(filters.private & filters.regex(pattern=".*https.*"))
+
+@Client.on_message(filters.private & filters.regex(pattern=".*http.*"))
 async def zee5_capture(bot, update):
 
     if update.from_user.id in Config.BANNED_USERS:
@@ -69,7 +70,6 @@ async def zee5_capture(bot, update):
                     g1 = (r1["hls"][0].replace("drm", "hls") + req1["video_token"])
                     file_name = r1["title"]
                     url = "https://" + li["url"] + g1
-                    #url = "https://zee5-ts.tprojects.workers.dev/?url=" + w
             elif "tvshows" or "originals" in w:
                     r2 = requests.get(li["token"] + "-".join(rgx), 
                                                 headers=headers, 
@@ -81,7 +81,6 @@ async def zee5_capture(bot, update):
                     else:
                         file_name = r2["title"]
                         url = "https://" + li["url"] + g2 + req1["video_token"]
-                        #url = "https://zee5-ts.tprojects.workers.dev/?url=" + w
                     
             logger.info(url)
         except:
@@ -89,7 +88,7 @@ async def zee5_capture(bot, update):
             return
             
     else:
-        await update.reply_text("I can download from Zee5 links only!", quote=True)
+        await update.reply_text("I can download from Zee5 links only! Use @UploadHEXbot for other links 😇", quote=True)
         return
     
     try:
@@ -148,17 +147,17 @@ async def zee5_capture(bot, update):
                             InlineKeyboardButton(
                                 "🎞 (" + format_string + ") " + approx_file_size + " ",
                                 callback_data=(cb_string_video).encode("UTF-8")
-                            )#,
-                            #InlineKeyboardButton(
-                                #"📁 FILE " + format_ext + " " + approx_file_size + " ",
-                                #callback_data=(cb_string_file).encode("UTF-8")
-                           # )
+                            ),
+                            InlineKeyboardButton(
+                                "📁 FILE " + format_ext + " " + approx_file_size + " ",
+                                callback_data=(cb_string_file).encode("UTF-8")
+                            )
                         ]                           
                         inline_keyboard.append(ikeyboard)
                         
             inline_keyboard.append([
                 InlineKeyboardButton(
-                    "✖️ CLOSE Shows ✖️",
+                    "✖️ CLOSE ✖️",
                      callback_data=(
                         "closeformat").encode("UTF-8")
                 )
@@ -225,7 +224,7 @@ async def zee5_execute(bot, update):
         videoname = linksplit[+5]
         logger.info(videoname)
         
-        custom_file_name = videoname
+        custom_file_name = videoname + ".mp4"
 
         await bot.edit_message_text(
             text=script.DOWNLOAD_START,
