@@ -68,7 +68,8 @@ async def zee5_capture(bot, update):
                                                 params={"translation":"en", "country":"IN"}).json()
                     g1 = (r1["hls"][0].replace("drm", "hls") + req1["video_token"])
                     file_name = r1["title"]
-                    url = "https://" + li["url"] + g1
+                    #url = "https://" + li["url"] + g1
+                    url = "https://zee5-ts.tprojects.workers.dev/?url=" + w
             elif "tvshows" or "originals" in w:
                     r2 = requests.get(li["token"] + "-".join(rgx), 
                                                 headers=headers, 
