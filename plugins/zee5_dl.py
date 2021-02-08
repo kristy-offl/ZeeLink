@@ -147,11 +147,11 @@ async def zee5_capture(bot, update):
                             InlineKeyboardButton(
                                 "🎞 (" + format_string + ") " + approx_file_size + " ",
                                 callback_data=(cb_string_video).encode("UTF-8")
-                            ),
-                            InlineKeyboardButton(
-                                "📁 FILE " + format_ext + " " + approx_file_size + " ",
-                                callback_data=(cb_string_file).encode("UTF-8")
-                            )
+                            )#,
+                            #InlineKeyboardButton(
+                                #"📁 FILE " + format_ext + " " + approx_file_size + " ",
+                                #callback_data=(cb_string_file).encode("UTF-8")
+                            #)
                         ]                           
                         inline_keyboard.append(ikeyboard)
                         
@@ -221,10 +221,10 @@ async def zee5_execute(bot, update):
         youtube_dl_url = zee5_capture.url
         
         linksplit = update.message.reply_to_message.text.split("/")
-        videoname = linksplit[+5]
+        videoname = linksplit[+7]
         logger.info(videoname)
         
-        custom_file_name = videoname + ".mp4"
+        custom_file_name = videoname
 
         await bot.edit_message_text(
             text=script.DOWNLOAD_START,
