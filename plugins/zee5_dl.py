@@ -83,6 +83,7 @@ async def zee5_capture(bot, update):
                         url = "https://" + li["url"] + g2 + req1["video_token"]
                     
             logger.info(url)
+            logger.info(file_name)
         except:
             await update.reply_text("There's some issue with your URL 😕", quote=True)
             return
