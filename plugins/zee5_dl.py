@@ -240,12 +240,12 @@ async def zee5_execute(bot, update):
         download_directory = tmp_directory_for_each_user + "/" + custom_file_name
         command_to_exec = []
         
-        minus_f_format = bestaudio+youtube_dl_format
+        #minus_f_format = bestaudio+youtube_dl_format
         command_to_exec = [
             "youtube-dl",
             "-c",
             "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
-            "-f", minus_f_format,
+            "-f", bestvideo+bestaudio --merge-output-format mp4,
             "--hls-prefer-ffmpeg", youtube_dl_url,
             "-o", download_directory
         ]                  
@@ -268,12 +268,12 @@ async def zee5_execute(bot, update):
         else:
             logger.info("issues found, passing to sub process")
             command_to_exec.clear()
-            minus_f_format = bestaudio+youtube_dl_format
+            #minus_f_format = bestaudio+youtube_dl_format
             command_to_exec = [
                 "youtube-dl",
                 "-c",
                 "--max-filesize", str(Config.TG_MAX_FILE_SIZE),
-                "-f", minus_f_format,
+                "-f", bestvideo+bestaudio --merge-output-format mp4,
                 "--hls-prefer-ffmpeg", youtube_dl_url,
                 "-o", download_directory
             ]                  
