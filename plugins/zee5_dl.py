@@ -240,7 +240,7 @@ async def zee5_execute(bot, update):
         download_directory = tmp_directory_for_each_user + "/" + custom_file_name
         command_to_exec = []
         
-        minus_f_format = youtube_dl_format + "+bestaudio"
+        minus_f_format = youtube_dl_format + "+bestaudio/best"
         command_to_exec = [
             "youtube-dl",
             "-c",
