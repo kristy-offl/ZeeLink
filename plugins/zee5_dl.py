@@ -24,7 +24,9 @@ from script import script
 from database.database import *
 
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
+
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
