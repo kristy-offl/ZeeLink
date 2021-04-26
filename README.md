@@ -1,4 +1,4 @@
-## Zee5 Downloader
+## Zee5 Premium Movies Downloader
 If you find any bugs, report at @TroJanzSupport
 
 **My Features**:
