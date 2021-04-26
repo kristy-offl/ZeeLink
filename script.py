@@ -2,11 +2,11 @@ class script(object):
 
     START_TEXT = """<b>Hai,
     
-I'm A JAsuran's Zee5 Non DRM link downloader bot With Permanent Thumbnail Support💯.
+I'm A JAsuran's Zee5 Premium Movies downloader bot With Permanent Thumbnail Support💯.
 
-Please send me any Zee5 link, I can upload it to telegram as File/Video.
+Please send me any Zee5 link, I can upload it to telegram as Video.
 
-Need to download Movie try this bot @Asuurlupbot for Stream with download
+Use this bot for zee5 movies only
 
 Click <u>/help</u> for more details....</b>"""
 
@@ -21,7 +21,7 @@ Click <u>/help</u> for more details....</b>"""
 NOTE: Download may take some time! So please wait for it to complete!"""
 
 
-    ABOUT_TEXT = """📌 <b>My Name : Zee5 Downloader</b>
+    ABOUT_TEXT = """📌 <b>My Name : Zee5 Movies Downloader</b>
 
 📌 <b>Creater :</b> @JAsuran
 
@@ -38,7 +38,7 @@ NOTE: Download may take some time! So please wait for it to complete!"""
 <i>NOTE : Taking high resolutions may result in files above 2GB and hence cannot Upload to TG. So better select a medium resolution.</i> 😇
 """    
     
-    UPGRADE_TEXT = "PING at @SerialCoIng"
+    UPGRADE_TEXT = "PING at @SerialCoIn"
     
     DOWNLOAD_START = "Trying to download to my server. This may take a while 😴"
     
