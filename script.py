@@ -38,7 +38,7 @@ NOTE: Download may take some time! So please wait for it to complete!"""
 <i>NOTE : Taking high resolutions may result in files above 2GB and hence cannot Upload to TG. So better select a medium resolution.</i> 😇
 """    
     
-    UPGRADE_TEXT = "PING at @SerialCoIn"
+    UPGRADE_TEXT = "PING at @SerialCoIng"
     
     DOWNLOAD_START = "Trying to download to my server. This may take a while 😴"
     
@@ -57,5 +57,10 @@ NOTE: Download may take some time! So please wait for it to complete!"""
     NO_THUMB = "So Sad 😢 No saved thumbnails Found!!"
     
     CUSTOM_CAPTION_UL_FILE = "<b>{newname}</b>"
-    TIMEOUT = "<b><i>Sorry for the delay. It'll help reduce the flood wait</i> 😇\n\nWait for {} sec and try again.</b>"
     
+    TIMEOUT = "<b><i>Sorry for the delay. It'll help reduce the flood wait</i> 😇\n\nWait for {} sec and try again.</b>"
+  
+    FREE_USER_LIMIT_Q_SZE = "Sorry Friend, Free users can only 1 request per {} minutes. Please try again after {} seconds later."
+    
+    CHECKING_LINK = "<code>Analysing Your Link</code>⏳"
+   
