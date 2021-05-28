@@ -53,6 +53,23 @@ async def zee5_capture(bot, update):
             revoke=True
         )
         return
+    logger.info(update.from_user.id)
+    fmsg = await update.reply_text(text=script.CHECKING_LINK, quote=True)
+    
+    if update.from_user.id not in Config.AUTH_USERS:
+        # restrict free users from sending more links
+        if str(update.from_user.id) in Config.ADL_BOT_RQ:
+            current_time = time.time()
+            previous_time = Config.ADL_BOT_RQ[str(update.from_user.id)]
+            process_max_timeout = round(Config.PROCESS_MAX_TIMEOUT/60)
+            present_time = round(Config.PROCESS_MAX_TIMEOUT-(current_time - previous_time))
+            Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
+            if round(current_time - previous_time) < Config.PROCESS_MAX_TIMEOUT:
+                await bot.edit_message_text(chat_id=update.chat.id, text=script.FREE_USER_LIMIT_Q_SZE.format(process_max_timeout, present_time), disable_web_page_preview=True, parse_mode="html", message_id=fmsg.message_id)
+                return
+        else:
+            Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
+    
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
         try:
@@ -73,7 +90,7 @@ async def zee5_capture(bot, update):
             await update.reply_text("Something Wrong. Contact my Support Group")
             return
 
-    logger.info(update.from_user.id)
+    #logger.info(update.from_user.id)
     
     if "zee5" in update.text:
         try:
