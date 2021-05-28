@@ -60,7 +60,7 @@ NOTE: Download may take some time! So please wait for it to complete!"""
     
     TIMEOUT = "<b><i>Sorry for the delay. It'll help reduce the flood wait</i> 😇\n\nWait for {} sec and try again.</b>"
   
-    FREE_USER_LIMIT_Q_SZE = "Sorry Friend, Free users can only 1 request per {} minutes. Please try again after {} seconds later."
+    FREE_USER_LIMIT_Q_SZE = "Please Wait I am Resetting 1 request per {} minutes. Try again after {} seconds later."
     
     CHECKING_LINK = "<code>Analysing Your Link</code>⏳"
    
