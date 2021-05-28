@@ -61,7 +61,7 @@ async def zee5_capture(bot, update):
         if str(update.from_user.id) in Config.ADL_BOT_RQ:
             current_time = time.time()
             previous_time = Config.ADL_BOT_RQ[str(update.from_user.id)]
-            process_max_timeout = round(Config.PROCESS_MAX_TIMEOUT/60)
+            process_max_timeout = round(Config.PROCESS_MAX_TIMEOUT/240)
             present_time = round(Config.PROCESS_MAX_TIMEOUT-(current_time - previous_time))
             Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
             if round(current_time - previous_time) < Config.PROCESS_MAX_TIMEOUT:
