@@ -32,3 +32,16 @@ class Config(object):
     # Sql Database url
     DB_URI = os.environ.get("DATABASE_URL", "")
     
+    # maximum message length in Telegram
+    MAX_MESSAGE_LENGTH = 4096
+
+    # set timeout for subprocess
+    PROCESS_MAX_TIMEOUT = int(os.environ.get("TIME_LIMIT"))
+    
+    # dict to hold the ReQuest queue
+    ADL_BOT_RQ = {}
+
+    # watermark file
+    DEF_WATER_MARK_FILE = ""
+    
+  
